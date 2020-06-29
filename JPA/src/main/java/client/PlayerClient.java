@@ -10,12 +10,12 @@ public class PlayerClient {
         JPAConnection connection=new JPAConnection();
         EntityManager em=connection.getConnection();
         PlayerService playerServiceObj=new PlayerService(em);
-//        String jsonString=playerServiceObj.getPlayerById(4);
+        String jsonString=playerServiceObj.getPlayerById(4);
 //        System.out.println(jsonString);
 //        System.out.println("--------------------------------------------");
-//        playerServiceObj.setPlayer(jsonString);
+        playerServiceObj.setPlayer(jsonString);
 //        System.out.println("--------------------------------------------");
-        String jsonString=playerServiceObj.getListOfPlayers();
+//        String jsonString=playerServiceObj.getListOfPlayers();
         System.out.println(jsonString);
         connection.closeConnection();
     }
